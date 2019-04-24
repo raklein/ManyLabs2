@@ -22,7 +22,7 @@ devtools::source_url("https://raw.githubusercontent.com/FredHasselman/invctr/mas
 
 
 # Provide root for OSFdata folder
-dir.in <- "~/Documents/GitHub/ManyLabs2/"
+dir.in <- getwd()
 # Output directory
 dir.out <- getwd()
 
@@ -146,9 +146,10 @@ mods1 <-  list(nomod_uni = rmaR0,
 outMeta_uni <- ldply(mods1,get.MetaResults)
 
 # Write output ----
-export(outMeta_uni,file.path(dir.out,"meta_analysis_wide.xlsx"))
+export(outMeta_uni, "./Script - Meta analyses/meta_analysis_wide.xlsx")
 
-pdf(file.path(dir.out,"FunnelPerAnalysis.pdf"), paper="a4r")
+
+pdf("./Script - Meta analyses/FunnelPerAnalysis.pdf", paper="a4r")
 
 for(m in seq_along(dfol)){
 
