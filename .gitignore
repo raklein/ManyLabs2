@@ -34,7 +34,6 @@ vignettes/*.pdf
 
 
 *.DS_Store
-*.Rproj
 .DS_Store
 .Rproj.user
 *.xlsx
